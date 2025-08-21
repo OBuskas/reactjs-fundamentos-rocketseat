@@ -13,10 +13,26 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   
     <script type="text/babel">
+
+      function Counter() {
+        const [counter, setCounter] = React.useState(0)
+
+        return (
+          <>
+            <p>Contador: {counter}</p>
+            <button
+              onClick={() => setCounter(counter + 1)}
+            >
+              Incrementar
+            </button>
+          </>
+        )
+      }
+
       function App() {
         return (
-          <main class='p-3'>
-            ...
+          <main>
+            <Counter />
           </main>
         )
       }
