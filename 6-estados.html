@@ -25,6 +25,18 @@
             >
               Incrementar
             </button>
+            <button
+              onClick={() => setCounter(0)}
+            >
+              Zerar
+            </button>
+            <button
+              onClick={() => 
+                setCounter((prevValue) => prevValue - 1)
+              }
+            >
+              Decrementar
+            </button>
           </>
         )
       }
